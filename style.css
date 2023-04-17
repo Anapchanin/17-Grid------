@@ -1,0 +1,123 @@
+/* шпаргалка по гридам https://tpverstak.ru/grid/ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a{ 
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.item-header > img{
+    height: 70px;
+    width: 70px;
+}
+
+header{
+    padding: 10px;
+    display: grid;
+    background-color: rgb(255, 208, 0);
+    grid-template-columns: 150px 1fr 150px;/*задание колонок*/
+    justify-items: center;/*Выравнивание по ширине*/
+    align-items: center;/*Выравнивание по высоте*/
+}
+
+main{
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    height: 100vh;
+
+}
+
+#siderbar{
+    background-color: rgb(97, 13, 176);
+    display: grid;
+    grid-template-rows: repeat(5, 70px);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-siderbar {
+    border: 3px dashed blueviolet;
+}
+
+#content-1 > div >img{
+    height:70px ;
+    width: 70px;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#content-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: (2,150);
+    justify-content:center ;/*вырывнивание блока*/
+    align-content: center;;/*вырывнивание блока*/
+    
+    justify-items: end;/*выравнивание всех элементов внутри блока*/
+    align-items: end ;/*выравнивание всех элементов внутри блока*/
+
+    grid-template-areas: "a a " "b c ";
+    gap: 5px;
+    
+}
+
+.item-content1-1{
+    background-color:red ;
+    grid-area: a;
+    
+}
+
+.item-content1-2{
+    background-color: gold;
+    grid-area: b ;
+    
+}
+
+.item-content1-3{
+    background-color:green ;
+    grid-area: c;
+    
+}
+
+#content-2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: repeat(2, 150px);
+    align-content: center;
+
+}
+
+#content-2 > div > img {
+    width:150px ;
+    height:150px ;
+}
+
+footer {
+    padding: 10px;
+    display: grid;
+    background-color:aqua;
+    grid-template-columns: 150px 1fr 150px ;/*задание колонок*/
+    justify-items: center;/*Выравнивание по ширине*/
+    align-items: center;/*Выравнивание по высоте*/
+    height: 70px;
+
+}
+
+
+
